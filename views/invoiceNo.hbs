@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Details</title>
+    <style>
+        .car-info {
+          background-color: #f5f5f5;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-top: 10px;
+        }
+      </style>
+</head>
+<body>
+    <h2>Car Sales Info for InvoiceNo: {{car.InvoiceNo}}</h2>
+    <div class="car-info">
+        <p><strong>Manufacturer:</strong> {{car.Manufacturer}}</p>
+        <p><strong>Model:</strong> {{car.Model}}</p>
+        <p><strong>Sales in thousands:</strong> {{car.Sales_in_thousands}}</p>
+    </div>
+</body>
+</html>

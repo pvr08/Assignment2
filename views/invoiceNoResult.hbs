@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Details</title>
+    <style>
+        
+        .car-info {
+          background-color: #f5f5f5;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-top: 10px;
+        }
+        .car-info li {
+          margin: 5px 0;
+        }
+      </style>
+</head>
+<body>
+    <h2>Car Sales Info for InvoiceNo: {{car.InvoiceNo}}</h2>
+    <div class="car-info">
+        <p><strong>Manufacturer:</strong> {{car.Manufacturer}}</p>
+        <p><strong>Model:</strong> {{car.Model}}</p>
+        <p><strong>Sales (in thousands):</strong> {{car.Sales_in_thousands}}</p>
+        <p><strong>Year Resale Value:</strong> {{car.__year_resale_value}}</p>
+        <p><strong>Vehicle Type:</strong> {{car.Vehicle_type}}</p>
+        <p><strong>Price (in thousands):</strong> {{car.Price_in_thousands}}</p>
+        <p><strong>Engine Size:</strong> {{car.Engine_size}}</p>
+        <p><strong>Horsepower:</strong> {{car.Horsepower}}</p>
+        <p><strong>Wheelbase:</strong> {{car.Wheelbase}}</p>
+        <p><strong>Width:</strong> {{car.Width}}</p>
+        <p><strong>Length:</strong> {{car.Length}}</p>
+        <p><strong>Curb Weight:</strong> {{car.Curb_weight}}</p>
+        <p><strong>Fuel Capacity:</strong> {{car.Fuel_capacity}}</p>
+        <p><strong>Fuel Efficiency:</strong> {{car.Fuel_efficiency}}</p>
+        <p><strong>Latest Launch:</strong> {{car.Latest_Launch}}</p>
+        <p><strong>Power Perf Factor:</strong> {{car.Power_perf_factor}}</p>
+    </div>
+</body>
+</html>

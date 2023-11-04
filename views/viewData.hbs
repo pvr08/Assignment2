@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Data</title>
+    <style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+table {
+  margin: 0 auto;
+}
+
+
+body {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+th {
+  background-color: #333;
+  color: white;
+}
+.highlight {
+  background-color: #f1d2ae; 
+  font-weight: bold;
+  
+}
+
+</style>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Data</title>
+</head>
+<body>
+    <h2>Sales Data</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice ID</th>
+                <th>Branch</th>
+                <th>City</th>
+                <th>Customer Type</th>
+                <th>Product Line</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Tax (5%)</th>
+                <th>Total</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Payment</th>
+                <th>COGS</th>
+                <th>Gross Income</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each superSalesData}}
+          {{!-- {{#if (notequal this.Rating 0)}} --}} 
+            {{#if (equal this.Rating 0)}}
+                <tr class="highlight">
+              {{else}}
+                <tr>
+              {{/if}}
+                    <td>{{getProperty this "Invoice ID"}}</td>
+                    <td>{{this.Branch}}</td>
+                    <td>{{this.City}}</td>
+                    <td>{{getProperty this "Customer type"}}</td>
+                    <td>{{getProperty this "Product line"}}</td>
+                    <td>{{this.name}}</td>
+                    <td><img src="{{this.image}}" alt="Product Image" width="100"></td>
+                    <td>{{getProperty this "Unit price"}}</td>
+                    <td>{{this.Quantity}}</td>
+                    <td>{{getProperty this "Tax 5%"}}</td>
+                    <td>{{this.Total}}</td>
+                    <td>{{this.Date}}</td>
+                    <td>{{this.Time}}</td>
+                    <td>{{this.Payment}}</td>
+                    <td>{{this.cogs}}</td>
+                    <td>{{getProperty this "gross income"}}</td>
+                    <td>{{RatingIsZero this.Rating}}</td>
+                </tr>
+           {{!-- {{/if}}--}}  
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
+
+</html>

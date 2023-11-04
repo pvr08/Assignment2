@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      
+      form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <title>Search by InvoiceNo</title>
+</head>
+<body>
+    <h2>Search by InvoiceNo</h2>
+    <form method="POST" action="/search/invoiceNo">
+        <input type="text" name="invoiceNo" placeholder="Enter Invoice No">
+        <input type="submit">
+    </form>
+    <p>{{car.InvoiceNo}}</p>
+</body>
+</html>
